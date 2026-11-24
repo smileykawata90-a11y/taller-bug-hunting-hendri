@@ -5,10 +5,12 @@ class MecanicoCreate(BaseModel):
     nombre_completo: str
     especialidad: str
 
-class MecanicoResponse(MecanicoCreate):
+class MecanicoResponse(MecanicoCreate): 
     id: int
     activo: bool
-    ordenes: List["OrdenResponse"] = []
+    # BUG 1: BORRADO - esto causaba el bucle infinito
+    # ordenes: List["OrdenResponse"] = []
+    # Orden -> Mecanico -> Orden -> Mecanico  nunca terminaba
 
     model_config = {"from_attributes": True}
 
@@ -28,3 +30,6 @@ class OrdenResponse(OrdenCreate):
     estado: str
     costo_reparacion: float
     mecanico: Optional[MecanicoResponse] = None
+
+    # BUG 2: FALTABA esto, sin esto no puede convertir el objeto de la BD a JSON
+    model_config = {"from_attributes": True}
