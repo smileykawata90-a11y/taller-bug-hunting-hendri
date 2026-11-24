@@ -12,3 +12,4 @@ async def obtener_bd():
         yield db
     finally:
         await db.close()
+        #no hay bug creo 
