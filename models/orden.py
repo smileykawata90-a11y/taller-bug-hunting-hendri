@@ -14,3 +14,4 @@ class Orden(Base):
     mecanico_id = Column(Integer, ForeignKey("mecanicos.id"), nullable=False)
 
     mecanico = relationship("Mecanico", back_populates="ordenes")
+    # no bug

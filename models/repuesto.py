@@ -7,4 +7,6 @@ class Repuesto(Base):
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     nombre = Column(String(100), nullable=False)
     precio_venta = Column(Float, nullable=False)
-    stock_actual = Column(Integer, default=0)
+    stock_actual = Column(Integer, default=0, nullable=False)
+
+   #no hay bug

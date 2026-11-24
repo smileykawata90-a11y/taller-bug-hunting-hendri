@@ -16,3 +16,7 @@ Este repositorio contiene una API construida con **FastAPI** y **SQLAlchemy Así
 - [ ] `GET /ordenes` debe devolver la lista de órdenes con los datos anidados de su mecánico sin bucles infinitos ni errores asíncronos.
 - [ ] `PATCH /ordenes/{id}` enviando solo `{"estado": "Reparada"}` no debe borrar la `falla_reportada` ni el `costo_reparacion` existentes.
 - [ ] `DELETE /ordenes/{id}` debe eliminar físicamente el registro de la base de datos.
+
+
+
+# HENDRI ALFONSO BLANCO NINO smilykawata90
